@@ -37,7 +37,7 @@ function getResult(playerSelection, computerSelection) {
             return "You win! Scissors beats Paper!";
             break;
         default:
-            playerscore += 1;
+            playerScore += 1;
             computerScore += 1;
             return `Draw! Both do ${playerSelection}`;
             break;            
