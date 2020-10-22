@@ -1,0 +1,16 @@
+body {
+    background-color: yellowgreen;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+.heading {
+    text-align: center;
+}
+.opt {
+    font-family: 'Comfortaa', cursive;
+    background-color: rgb(19, 141, 70);
+    color: whitesmoke;
+    font-size: 20px;
+    padding: 5px;
+    margin: 15px;
+}
