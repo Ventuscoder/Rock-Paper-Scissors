@@ -6,6 +6,9 @@ body {
 .heading {
     text-align: center;
 }
+.opt-btn {
+    margin: 30px;
+}
 .opt {
     font-family: 'Comfortaa', cursive;
     background-color: rgb(19, 141, 70);
@@ -13,4 +16,12 @@ body {
     font-size: 20px;
     padding: 5px;
     margin: 15px;
+}
+.status {
+    display: block;
+    margin: 15px;
+}
+.score-table {
+    display: inline-block;
+    margin: 25px;
 }

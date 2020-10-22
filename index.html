@@ -4,7 +4,6 @@
         <title>Rock-Paper-Scissors Game</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-        <script src="rps.js"></script>
     </head>
     <body>
         <h1 class="heading">Rock-Paper-Scissors Game</h1>
@@ -15,27 +14,16 @@
             <button class="opt scissors"> Scissors </button>
         </div>
         <h3 class="status"></h3>
-        <table>
-            <tr>
-                <td class="11"></td>
-                <td class="12"></td>
-            </tr>
-            <tr>
-                <td class="21"></td>
-                <td class="22"></td>
-            </tr>
-            <tr>
-                <td class="31"></td>
-                <td class="32"></td>
-            </tr>
-            <tr>
-                <td class="41"></td>
-                <td class="42"></td>
-            </tr>
-            <tr>
-                <td class="51"></td>
-                <td class="52"></td>
-            </tr>
-        </table>
+        <div class="score">
+            <div class="score-table">
+                Player's Score:
+                <p class="player-score"></p>
+            </div>
+            <div class="score-table">
+                Computer's Score:
+                <p class="comp-score"></p>
+            </div>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>
