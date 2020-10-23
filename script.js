@@ -48,37 +48,33 @@ function getResult(playerSelection, computerSelection) {
 function playRound(playerMove, computerMove=computerPlay(moves)) {
     const statusBar = document.querySelector('.status');
     let result = getResult(playerMove, computerMove);
-    if (result[1] == 'green') {
-        statusBar.textContent = result[0];
-        statusBar.style.color = result[1];
+    if (computerScore == 5) {
+        document.querySelector('.status').textContent = `The computer has won by a score of ${computerScore} - ${playerScore}!`;
+        document.querySelector('.player-score').textContent = playerScore;
+        document.querySelector('.comp-score').textContent = computerScore;
+    } else if (playerScore == 5) {
+        document.querySelector('.status').textContent = `'You have won by a score of ${playerScore} - ${computerScore}!`;
+        document.querySelector('.player-score').textContent = playerScore;
+        document.querySelector('.comp-score').textContent = computerScore;
     } else {
-        statusBar.textContent = result[0];
-        statusBar.style.color = result[1];
+        if (result[1] == 'green') {
+            statusBar.textContent = result[0];
+            statusBar.style.color = result[1];
+        } else {
+            statusBar.textContent = result[0];
+            statusBar.style.color = result[1];
+        }
+        document.querySelector('.player-score').textContent = playerScore;
+        document.querySelector('.comp-score').textContent = computerScore;
     }
-    document.querySelector('.player-score').textContent = playerScore;
-    document.querySelector('.comp-score').textContent = computerScore;
 }
 
-// This function plays the game
 function game() {
-    while (gameOn == true){
-        if (playerScore == 5 && computerScore !== 5) {
-            document.querySelector('.status').textContent = `'You have won by a score of ${playerScore} - ${computerScore}!`;
-            gameOn = false;
-        } else if (computerScore == 5 && playerScore !== 5){
-            document.querySelector('.status').textContent = `The computer has won by a score of ${computerScore} - ${playerScore}!`;
-            gameOn = false
-        } else {
-            moves.forEach(move => {
-                document.querySelector(`.${move}`).addEventListener('click', (e) => {
-                    playRound(move);
-                });
-            });
-        }
-    }
-    
-    // This event listener is very clever, because it does not initalize unuseful variables
-    
+    moves.forEach(move => {
+        document.querySelector(`.${move}`).addEventListener('click', function(){
+            playRound(move);
+        });
+    });
 }
 
 game();
