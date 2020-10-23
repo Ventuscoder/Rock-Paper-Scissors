@@ -50,12 +50,16 @@ function playRound(playerMove, computerMove=computerPlay(moves)) {
     let result = getResult(playerMove, computerMove);
     if (computerScore == 5) {
         document.querySelector('.status').textContent = `The computer has won by a score of ${computerScore} - ${playerScore}!`;
-        document.querySelector('.player-score').textContent = playerScore;
-        document.querySelector('.comp-score').textContent = computerScore;
+        document.querySelector('.player-score').textContent = 0;
+        document.querySelector('.comp-score').textContent = 0;
+        playerScore = 0;
+        computerScore = 0;
     } else if (playerScore == 5) {
         document.querySelector('.status').textContent = `'You have won by a score of ${playerScore} - ${computerScore}!`;
-        document.querySelector('.player-score').textContent = playerScore;
-        document.querySelector('.comp-score').textContent = computerScore;
+        document.querySelector('.player-score').textContent = 0;
+        document.querySelector('.comp-score').textContent = 0;
+        playerScore = 0;
+        computerScore = 0;
     } else {
         if (result[1] == 'green') {
             statusBar.textContent = result[0];
