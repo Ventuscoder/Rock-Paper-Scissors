@@ -16,6 +16,7 @@ body {
     font-size: 20px;
     padding: 5px;
     margin: 15px;
+    cursor: pointer;
 }
 .status {
     display: block;
